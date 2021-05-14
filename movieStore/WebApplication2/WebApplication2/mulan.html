@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>netflix</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="StyleSheet1.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1>movie<span class="S">S</span><span class="tore">tore</span></h1>
+        <div class="s">
+            <div class="search">
+                <input type="text" placeholder="search" />
+            </div>
+        </div>
+    </header>
+
+    <div class="banner">
+        <img src="imgs/Disney-Mulan.jpg" class="bannerimg" />
+        <div class="content">
+            <h4>
+                <span>2020</span>
+                <span><i>21+</i></span>
+                <span>1h 55min 12sec</span>
+                <span>Action</span>
+            </h4>
+            <p>
+                The film revolves around a young Chinese girl, Mulan,
+                who aspires to more than a normal and married life,
+            </p>
+            <p>
+                using instructions in a form and a warrior uniform, in order to
+                save her father.
+            </p>
+            <div class="buttons">
+                <a href="#"><i class="fa fa-play" aria-hidden="true"></i>Play</a>
+                <a href="https://www.youtube.com/"><i class="fa fa-youtube-play fa-1x" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-plus" aria-hidden="true"></i>My List</a>
+            </div>
+        </div>
+        <div class="p">
+            <a class="play" onclick="togglev();"><i class="fa fa-play-circle-o fa-4x" aria-hidden="true"></i>&nbsp; Watch Trailer</a>
+        </div>
+
+        <div class="media">
+            <ul>
+                <li><img src="imgs/instagram.png" /></li>
+                <li><img src="imgs/facebook.png" /></li>
+                <li><img src="imgs/twitter.png" /></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="trailer">
+        <video controls="controls">
+            <source src="imgs/mulan.mp4" type="video/mp4" />
+        </video>
+        <i class="close"> <i class="fa fa-times fa-4x" aria-hidden="true" onclick="togglevideo();"></i></i>
+    </div>
+
+    <script>
+        function togglev() {
+            const trailer = document.querySelector('.trailer');
+            const video = document.querySelector('video');
+            trailer.classList.toggle('active');
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+    <script src="JavaScript.js"></script>
+</body>
+</html>
